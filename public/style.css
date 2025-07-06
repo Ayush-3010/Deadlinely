@@ -1,0 +1,342 @@
+/* Additional Styles for WOW Factor */
+
+/* Particles Background */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: #0e0e0e;
+}
+
+/* Enhance Container */
+.container {
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.2);
+}
+
+/* Neon Title Glow */
+.title {
+  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #ffae00;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 10px;
+}
+
+/* Todo List Animation */
+#todo-list li {
+  animation: slideIn 0.4s ease;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Completed Item Bounce */
+.completed {
+  animation: bounce 0.3s ease;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Button Click Pulse */
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px #FFD700;
+}
+
+/* Label Styles */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #f0e68c;
+  text-align: left;
+  display: block;
+}
+
+/* Entry Field Focus Highlight */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 5px #FFD700;
+}
+
+/* Yellow GIF Background */
+    .background-gif {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cGRjenRsdXcxaGI2ZjJibHB4cWdzeDg0dm40NmU3cnp1eXc2dDR6eiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/AFdcYElkoNAUE/giphy.gif") center center / cover no-repeat fixed;
+      z-index: -2;
+      opacity: 0.9;
+    }
+
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+      margin: 20px;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #FFD700;
+      margin-bottom: 20px;
+      animation: typing 3s steps(30, end);
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #FFD700;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="datetime-local"],
+    textarea {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 16px;
+      transition: background 0.3s;
+      width: 100%;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder,
+    textarea::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #FFD700;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #FFD700;
+      margin: 5px;
+    }
+
+    button:hover {
+      background-color: #ffa500;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ffa500;
+    }
+
+    button:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 30px #fff700;
+    }
+
+    a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #todo-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    #todo-list li {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: #ccc;
+      opacity: 0.7;
+    }
+
+    .header-gif {
+      width: 120px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #FFD700;
+    }
+
+    /* Dashboard specific styles */
+    .dashboard {
+      display: none;
+      width: 100%;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .dashboard-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .task-form {
+      grid-column: 1 / -1;
+    }
+
+    .priority-5 {
+      animation: pulseRed 2s infinite;
+      border-left: 5px solid #ff4444;
+    }
+
+    .priority-4 {
+      border-left: 5px solid #ff6b6b;
+    }
+
+    .priority-3 {
+      border-left: 5px solid #FFD700;
+    }
+
+    .priority-2 {
+      border-left: 5px solid #a5d6a7;
+    }
+
+    .priority-1 {
+      border-left: 5px solid #66bb6a;
+    }
+
+    @keyframes pulseRed {
+      0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+    }
+
+    .ai-suggestion {
+      background: rgba(255, 215, 0, 0.1);
+      border-left: 3px solid #FFD700;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      font-style: italic;
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      flex: 1;
+      margin: 0 5px;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    .nlp-input {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .nlp-input textarea {
+      flex: 1;
+      min-height: 80px;
+    }
+
+    .nlp-input button {
+      align-self: flex-end;
+    }
